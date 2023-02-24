@@ -9,6 +9,10 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
@@ -17,7 +21,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
       <Navbar />
-      <main>{children}</main>
+      <main className="main-container ">{children}</main>
       <Footer />
     </>
   );
