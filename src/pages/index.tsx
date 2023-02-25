@@ -9,6 +9,9 @@ export interface PokemonProps {
   id: number;
   name: string;
   url: string;
+  type: {
+    name: string;
+  };
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -28,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
       pokemons: data.results,
     },
   };
-}
+};
 
 export default function Home({ pokemons }: PokemonProps[]) {
   return (
