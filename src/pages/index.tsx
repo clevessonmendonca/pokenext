@@ -1,5 +1,5 @@
 import styles from "@/styles/Home.module.css";
-import { GetStaticProps } from "next";
+import { GetStaticProps } from "next/types";
 import Image from "next/image";
 
 import Pokeball from "public/images/pokeball.png";
@@ -11,7 +11,7 @@ export interface PokemonProps {
   url: string;
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const maxPokemons = 252;
   const api = `https://pokeapi.co/api/v2/pokemon/`;
 
