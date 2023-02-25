@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 
 import Pokeball from "public/images/pokeball.png";
-import Card from "./components/Card";
+import Card from "@/components/Card";
 
 export interface PokemonProps {
   id: number;
@@ -28,7 +28,7 @@ export async function getStaticProps() {
       pokemons: data.results,
     },
   };
-};
+}
 
 export default function Home({ pokemons }: PokemonProps[]) {
   return (
