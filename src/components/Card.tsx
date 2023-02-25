@@ -16,7 +16,7 @@ export default function Card({ pokemon }: PokemonProps) {
       <p className={styles.id}>#{pokemon.id}</p>
       <h3 className={styles.title}>{pokemon.name}</h3>
       <Link className={styles.btn} href={`/pokemon/${pokemon.id}`}>
-        Detalhes
+        Details
       </Link>
     </div>
   );
